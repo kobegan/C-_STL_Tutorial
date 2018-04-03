@@ -1,6 +1,7 @@
 #include <vector>
 #include <algorithm>
 #include <iostream>
+#include <time.h>
 
 namespace howToFillVectorWithRandomNumbers {
     // For this task we will use a STL algorithm std::generate i.e.
@@ -15,6 +16,7 @@ namespace howToFillVectorWithRandomNumbers {
     void test()
     {
         std::cout << __FUNCTION__ << "\n";
+        srand(time(0));
         std::vector<int> vecOfRandomNums(10);
         // Generate 10 random numbers by lambda func and fill it in vector
         std::generate(vecOfRandomNums.begin(), vecOfRandomNums.end(), []() {
@@ -36,6 +38,7 @@ namespace howToFillVectorWithRandomNumbers {
         int maxValue;
         RandomGenerator(int max) :
             maxValue(max) {
+            srand(time(0));
         }
 
         int operator()() {
@@ -67,7 +70,7 @@ namespace inportanceOfContructorsWhileUsingUserDefinedObjects {
     This is because of two reasons,
     1. All STL containers always stores the copy of inserted objects not the actual one. 
     So, whenever we insert any element or object in    container then 
-    it¡¯s copy constructor is called to create a copy and 
+    its copy constructor is called to create a copy and 
     then this copy is inserted in the container.
     2. While insertion in std::vector it might be possible that 
     storage relocation takes place internally due to insufficient space. 

@@ -32,7 +32,7 @@ namespace queueAndHowItWorksInternally {
     //How std::deque works internally
     /*
     A deque is generally implemented as a collection of memory blocks. These memory blocks contains the elements at contiguous locations.
-    When we create a deque object it internally allocates a memory block to store the elements at contigious location.
+    When we create a deque object it internally allocates a memory block to store the elements at continuous location.
     When we insert an element in end it stores that in allocated memory block 
     until it gets filled and when this memory block gets filled 
     with elements then it allocates a new memory block and 

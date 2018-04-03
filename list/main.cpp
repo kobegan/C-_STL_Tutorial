@@ -2,6 +2,7 @@
 #include <algorithm>
 #include <list>
 #include <iterator>
+#include <string>
 
 namespace tutorialExampleAndUsageDetails {
     /*
@@ -56,7 +57,7 @@ namespace tutorialExampleAndUsageDetails {
     //Erasing elements from std::list
     /*
     erase(iterator_position,elem)
-    It erases the element at the passed node and chane the left and right pointers of previous and next nodes. Also returns iterator of next node element. This opeartion takes O(1) time,
+    It erases the element at the passed node and change the left and right pointers of previous and next nodes. Also returns iterator of next node element. This operation takes O(1) time,
 
     It has an other overloaded implementations i.e.
     erase(other_list_begin,other_list_end)
